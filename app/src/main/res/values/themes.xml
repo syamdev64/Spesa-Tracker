@@ -6,4 +6,18 @@
     </style>
 
     <style name="Theme.SpesaTracker" parent="Base.Theme.SpesaTracker" />
+
+    <!-- In res/values/styles.xml or themes.xml -->
+    <style name="OtpEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/textbox_outline</item> <!-- Assuming you have a drawable like this -->
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
