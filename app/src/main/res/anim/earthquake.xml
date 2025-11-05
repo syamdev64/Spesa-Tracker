@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Move from 0 to 10 pixels to the right -->
+    <translate
+        android:fromXDelta="0"
+        android:toXDelta="10"
+        android:duration="100"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator" />
+
+    <!-- Move from 10 to -10 pixels (a 20px shift to the left) -->
+    <translate
+        android:fromXDelta="10"
+        android:toXDelta="-10"
+        android:duration="100"
+        android:startOffset="100"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator" />
+
+    <!-- Move from -10 back to 0 -->
+    <translate
+        android:fromXDelta="-10"
+        android:toXDelta="0"
+        android:duration="100"
+        android:startOffset="200"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator" />
+</set>
