@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.example.spesatracker.R
+import com.example.spesatracker.dashboard.DashboardActivity
 import com.example.spesatracker.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -34,8 +35,12 @@ class LoginActivity : AppCompatActivity() {
         binding.forgotpassword.setOnClickListener {
             val intent = Intent(this, ForgotActivity::class.java)
             startActivity(intent)
-
         }
+        binding.loginbtn.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun animateTitle(text: String) {
@@ -52,9 +57,9 @@ class LoginActivity : AppCompatActivity() {
                 setTextColor(
                     ContextCompat.getColor(
                         context,
-                        android.R.color.black
+                        android.R.color.white
                     )
-                ) // Start as black
+                )
             }
 
             titleContainer.addView(charTextView)

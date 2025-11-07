@@ -26,9 +26,14 @@ class ForgotOtpVerifyActivity : AppCompatActivity() {
 
     private fun setupOtpListeners() {
         for (i in otpFields.indices) {
-            // 1. TextWatcher for automatically moving focus forward
             otpFields[i].addTextChangedListener(object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+                }
 
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                     if (!s.isNullOrEmpty() && i < otpFields.size - 1) {
@@ -50,4 +55,5 @@ class ForgotOtpVerifyActivity : AppCompatActivity() {
                 return@setOnKeyListener false
             }
         }
-    }}
+    }
+}

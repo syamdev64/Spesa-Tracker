@@ -22,6 +22,7 @@
         </activity>
         <activity android:name="com.example.spesatracker.login.ForgotActivity" />
         <activity android:name="com.example.spesatracker.login.ForgotOtpVerifyActivity" />
+        <activity android:name="com.example.spesatracker.dashboard.DashboardActivity" />
     </application>
 
 </manifest>
