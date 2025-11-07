@@ -61,7 +61,7 @@ class GroupAdapter(private val groups: List<Group>) :
             else -> {
                 holder.balanceStatus.text = "settled up"
                 holder.balanceAmount.text = ""
-                val gray = ContextCompat.getColor(context, android.R.color.darker_gray)
+                val gray = ContextCompat.getColor(context, R.color.google_green)
                 holder.balanceStatus.setTextColor(gray)
                 holder.balanceAmount.setTextColor(gray)
             }
@@ -69,7 +69,8 @@ class GroupAdapter(private val groups: List<Group>) :
     }
 
     override fun getItemCount(): Int {
-        return groups.size
+        val fixedsize = 10
+        return minOf(groups.size, fixedsize)
 
     }
 
